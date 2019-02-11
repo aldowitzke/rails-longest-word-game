@@ -5,3 +5,17 @@
   display: grid;
 
 }
+
+#letter {
+  display: inline-block;
+  border: 2px solid #3498DC;
+  background-color: #3498DC;
+  color: white;
+  height: 50px;
+  width: 70px;
+  padding-top: 25px;
+  text-align: center;
+  margin: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px gray;
+}

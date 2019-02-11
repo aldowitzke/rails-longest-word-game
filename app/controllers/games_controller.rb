@@ -8,13 +8,13 @@ class GamesController < ApplicationController
 
   def score
     @letters = params[:letters]
-    @word = params[:word]
+    @word = params[:word].upcase
 
     @message =
       if !included?(@word, @letters)
         'Not in the grid'
       elsif valid_word?(@word)
-        'This word is a english word!'
+        'This is a English word. Well done!'
       else
         'This is not an English word'
       end
@@ -29,6 +29,6 @@ class GamesController < ApplicationController
   end
 
   def included?(word, letters)
-    word.upcase.chars.all? { |letter| word.count(letter) <= letters.count(letter) }
+    word.chars.all? { |letter| word.count(letter) <= letters.count(letter) }
   end
 end
